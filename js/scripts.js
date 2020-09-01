@@ -14,3 +14,7 @@
         console.timeEnd('Hola');*/
 
 console.log('Funciona');
+
+var nombreCliente = 'Pedro'; //camelCase * Este es el que se recomienda en JS Nunca empezar con numeros y no se usan caracteres extranhos.
+var nombre_cliente = 'Juan'; //underscore
+var NombreCliente = 'Day'; //pascal case
