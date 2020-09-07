@@ -38,5 +38,51 @@ console.log(nombre);*/
 let master = 'Master ',
     puppets = 'Of puppets';
 
+
+/**Convertir de string a Number**/
 console.log (master.repeat(3));
 console.log(puppets);
+
+let n1 = 50,
+    n2 = "10",
+    n3 = "tres",
+    n4 = "20.20";
+
+console.log(n1 + n2);
+console.log(n1 - n2);
+console.log(Number(n2) + n1);
+console.log( parseInt(n4) + n1);
+console.log(Number(n3)); //n3 es un string: Tres
+
+let dato;
+dato = Number("20");
+dato = Number("-20.20");
+dato = Number(true);
+dato = Number(false);
+dato = Number(null);
+dato = Number("Hola Mundo");
+dato = Number([1,2,3,4]);
+
+//parseInt y ParseFloat
+dato = parseInt("100");
+dato = parseInt("100.20");
+dato = parseFloat("100");
+dato = parseFloat("100.20");
+console.log(dato);
+
+//To fixed
+let num1 = "10120180.12100123021";
+let num2 = 10120180.12100123021;
+console.log(Number(num1).toFixed(5));
+console.log(num2.toFixed(5));
+
+/**Convertir de Number a string **/
+let dat = 237892783827;
+let year = 19821;
+
+dato = string(dat);
+dato = string(year);
+
+console.log(dato);
+console.log(dato.lengh);
+
