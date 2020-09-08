@@ -76,7 +76,7 @@ let num2 = 10120180.12100123021;
 console.log(Number(num1).toFixed(5));
 console.log(num2.toFixed(5));
 
-/**Convertir de Number a string **/
+/**Convertir de Number a string
 let dat = 237892783827;
 let year = 19821;
 
@@ -84,5 +84,21 @@ dato = string(dat);
 dato = string(year);
 
 console.log(dato);
-console.log(dato.lengh);
+console.log(dato.lengh); **/
 
+/**Arrays**/
+const meses = new Array ('enero', 'febrero', 'marzo');
+
+meses.push('abril');//push agrega al  final del arreglo
+meses.push('mayo');
+meses.unshift('mes 0'); //Agrega al inicio del arreglo
+meses.pop(''); //Elimina al final del arreglo
+meses.shift();  //Elimina del principio del arreglo
+meses.splice(0, 2); //Eliminar de un rango del arreglo
+meses.reverse(); //Cambia el orden del arreglo, el primer valor lo pone al final y el ultimo al principio.
+
+let frutas = ['platano', 'manzana', 'fresa', 'uva'];
+frutas.sort();
+console.log(frutas);
+
+console.log(meses);
