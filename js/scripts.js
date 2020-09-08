@@ -102,3 +102,21 @@ frutas.sort();
 console.log(frutas);
 
 console.log(meses);
+
+/****Objetos****/
+
+const persona = {
+    nombre: 'Juan',
+    apellido: 'Batista',
+    edad: 50,
+    trabajo: true,
+    musica: ['salsa', 'rap', 'RNB'],
+    hogar : {
+        ciudad: 'Londres',
+        pais: 'GB'
+    }
+}
+
+console.log(persona.edad);
+console.log(persona.musica[1]);
+console.log(persona.hogar.pais);
