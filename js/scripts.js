@@ -120,3 +120,25 @@ const persona = {
 console.log(persona.edad);
 console.log(persona.musica[1]);
 console.log(persona.hogar.pais);
+
+// Template strings
+const name = 'Juan',
+      job = 'Web Dev';
+
+console.log('Nombre: ' + name + ', Trabajo: ' + job); //Seria lo mismo que:
+console.log(`Nombre: ${name}, Trabajo: ${job}`); // Template strings ok
+
+const contenedorApp = document.querySelector('#mensaje');
+
+let html = '<ul>' +
+                '<li>Nombre: ' + name + '</li>' +
+                '<li>Trabajo: ' + job + '</li>' +
+            '</ul>';
+
+let html2 = `<ul>
+                <li>Nombres: ${name}</li>
+                <li>Trabajos: ${job}</li>
+            </ul>`;            
+
+contenedorApp.innerHTML = html;
+contenedorApp.innerHTML = html2;
