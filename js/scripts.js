@@ -131,14 +131,72 @@ console.log(`Nombre: ${name}, Trabajo: ${job}`); // Template strings ok
 const contenedorApp = document.querySelector('#mensaje');
 
 let html = '<ul>' +
-                '<li>Nombre: ' + name + '</li>' +
-                '<li>Trabajo: ' + job + '</li>' +
+                '<li>Nombre1: ' + name + '</li>' +
+                '<li>Trabajo1: ' + job + '</li>' +
             '</ul>';
 
-let html2 = `<ul>
-                <li>Nombres: ${name}</li>
-                <li>Trabajos: ${job}</li>
+// Template strings more complicated
+let html2 = `<ul> 
+                <li>Nombre2: ${name}</li>
+                <li>Trabajo2: ${job}</li>
             </ul>`;            
 
-contenedorApp.innerHTML = html;
+//contenedorApp.innerHTML = html;
 contenedorApp.innerHTML = html2;
+
+
+
+
+//****Function Declaration - Se puede llamar la funcion antes de declararla
+
+saludar('Dany', 'Desarrollador Web');
+
+function saludar(nombre3 = 'Visitante', trabajo3 = 'No se sabe'){ //Pasando paramentros por defecto en la declaracion de la funcion
+    console.log('Hola ' + nombre3 + ', Tu trabajo es: ' + trabajo3);
+}
+//Reutilizar codigo - llamar a la funcion muchas veces.
+saludar('Buty', 'Corredor de seguros');
+saludar('Pedry', 'Manager');
+saludar('Vei');
+
+//****Function expression - No se puede llamar la funcion antes de declararla
+const suma = function(a=0,b=0){ //Pasando paramentros por defecto en la declaracion de la funcion
+    console.log(a+b);
+}
+suma();
+suma(20, 30);
+suma(200, 300);
+
+//**** IIFE */ Funcion auto invocada - Declaracion basica
+(function(){
+    console.log('Aqui estoy!')
+})();
+
+//Pasandole paramentros: Se pone la variable dentro del primer parentesis y el paramentro dentro del ultimo.
+(function(tecnologia){
+    console.log('Aqui estoy!, Aprendiendo mas ' + tecnologia)
+})('JS');
+
+
+//***** Metodos - Funcion dentro de un objeto */
+
+const musica = {
+    reproducir: function (cancion) {
+        console.log('Reproduciendo la cancion: ' + cancion);
+    },
+    pausar: function() {
+        console.log('Paused ...')
+    }
+}
+
+musica.reproducir('ChieChie');
+musica.pausar();
+musica.reproducir('La Cueva');
+
+// Los metodos tambien pueden ir por fuera
+musica.borrar = function (id){
+    console.log('Borrando la cancion con el ID: ' + id);
+}
+musica.borrar(121);
+
+
