@@ -145,7 +145,9 @@ let html2 = `<ul>
 contenedorApp.innerHTML = html2;
 
 
-
+/*Funciones*/
+alert();
+prompt(); 
 
 //****Function Declaration - Se puede llamar la funcion antes de declararla
 
@@ -199,4 +201,47 @@ musica.borrar = function (id){
 }
 musica.borrar(121);
 
+/**Funciones que retornan valores y Arrow Functions **/
 
+const suma1 = (a = 0, b = 0) => {
+    return a + b;
+}
+const multiplicar = (c) => { /*Cuando en un arrow function pasas un solo parametro, puedes quitar los parentesis*/
+    return c * 5;
+}
+
+let total;
+let resultadoSuma = suma1(1, 3);
+total = multiplicar (resultadoSuma);
+ console.log(total);
+
+/**Arrow function - Nueva forma de crear funciones/ mas compacta y resumida**/
+const suma2 = (x, y) => x + y;
+const mult2 = w => w * 10; 
+
+let total2;
+let resultadoSuma2 = suma2(1, 4);
+total2 = mult2 (resultadoSuma2);
+ console.log(total2);
+
+
+ /*Otro ejemplo - Primero Function Expression:
+
+ let viajando = function (destino) {
+     return 'Viajando a ' + destino;
+ }
+
+ let viaje;
+ viaje = viajando ('Londres');
+ viaje = viajando ('Paris');
+
+ console.log(viaje);*/
+
+ /*Lo mismo con Arrow Function*/
+let viajando = destino => 'Viajando a ' + destino;
+let viaje;
+viaje = viajando ('Londres');
+viaje = viajando ('Paris');
+console.log(viaje);
+
+/**Objeto  **/
