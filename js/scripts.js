@@ -244,4 +244,37 @@ viaje = viajando ('Londres');
 viaje = viajando ('Paris');
 console.log(viaje);
 
-/**Objeto  **/
+/**Objetos  **/
+/**Object literal**/
+const persona4 = {
+    nombre: 'Juan',
+    edad: 80,
+    anhoNacimiento: function() {
+        return new Date().getFullYear() - this.edad;
+    }
+}
+console.log(persona4.anhoNacimiento());
+
+/**Object Constructor**/
+function Tarea(nombre4, urgencia) {
+    this.nombre4 = nombre4;
+    this.urgencia = urgencia;
+}
+/**Crear nueva tarea**/
+const tarea1 = new Tarea('Aprender JS', 'Urgente');
+const tarea2 = new Tarea('Hacer cafe', 'Urgente');
+const tarea3 = new Tarea('Pasear perro', 'media');
+const tarea4 = new Tarea('Aprender React', 'Urgente');
+
+console.log (tarea1);
+console.log (tarea2);
+console.log (tarea3);
+console.log (tarea4);
+
+/**Usando Clases**/
+class Tarea1 {
+    constructor(nombre5, urgencia1) {
+    this.nombre5 = nombre5;
+    this.urgencia1 = urgencia1;
+    }
+}
