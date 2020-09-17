@@ -308,3 +308,11 @@ const unDia=new Date('1-5-1987');
 let valor1;
 valor1=unDia.getDay();
 console.log(valor1);
+
+//Condicionales - if, ifelse, else
+
+
+//Operador && y || y el Ternario
+
+
+
