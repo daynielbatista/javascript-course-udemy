@@ -278,3 +278,33 @@ class Tarea1 {
     this.urgencia1 = urgencia1;
     }
 }
+
+/**Fechas**/
+const diaHoy = new Date();
+
+let valor = diaHoy;
+//Retorna el numero del mes: 0=Enero
+valor=diaHoy.getMonth();
+//Retorna el numero del dia: 0=Domingo
+valor=diaHoy.getDay();
+
+//Retorna el numero del dia del mes
+valor=diaHoy.getDate();
+//minutos de la hora
+valor=diaHoy.getMinutes();
+//Horas del dia
+valor=diaHoy.getHours();
+//timestamp
+valor=diaHoy.getTime();
+
+//año actual
+valor = diaHoy.getFullYear();
+valor = diaHoy.setFullYear(1998);
+valor = diaHoy.getFullYear();
+console.log(valor);
+
+//new date es igual a Mes, Dia y Año
+const unDia=new Date('1-5-1987');
+let valor1;
+valor1=unDia.getDay();
+console.log(valor1);
