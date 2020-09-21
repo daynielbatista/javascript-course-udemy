@@ -394,18 +394,43 @@ let automovil = {
 }*/
 
 //Otra forma de declarar un Ciclo For para arreglos
-for(p of pend) {
+/*for(p of pend) {
     console.log(p);
 }
-
 for(prod of carrito) {
     console.log(prod.prod);
-}
+}*/
 
 //Otra forma de declarar un Ciclo For para Objetos
-for(info of Object.values(automovil)) {
+/*for(info of Object.values(automovil)) {
     console.log(info);
-}
+}*/
 
+//Foreach ***************
 
+/*pend.forEach(function(tarea) {
+    console.log(tarea);
+});*/
 
+//ForEach con Arrow Function
+
+/*pend.forEach(tarea => {
+    console.log(tarea);
+});
+
+//Map con arrow function -  crea una copia del arreglo o lo que esta iterando
+
+pend.map(tarea => {
+    console.log(tarea);
+});*/
+
+let nuevoArreglo = pend.forEach(tarea =>{
+
+});
+let nuevoArreglo2 = pend.map(tarea =>{
+    //return tarea;
+});
+console.log(nuevoArreglo);
+console.log(nuevoArreglo2);
+
+//Volver a ver los forEach y los Maps.
