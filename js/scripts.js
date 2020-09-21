@@ -371,9 +371,41 @@ do {
     k++;
 } while (k<10);
 
+//Arreglo
 const pend = ['tarea', 'comer', 'JS'];
 
+//Arreglo con Objetos
+const carrito = [
+    {id: 1, prod: 'libro'},
+    {id: 2, prod: 'cama'},
+    {id: 3, prod: 'disco'}
+];
 
+//Objeto
+let automovil = {
+    modelo: 'TT',
+    motor: '6.0',
+    anho: 1985,
+    marca:'audi'
+}
+
+/*for (let q = 0; q < pend.length; q++) {
+    console.log (pend[q]);
+}*/
+
+//Otra forma de declarar un Ciclo For para arreglos
+for(p of pend) {
+    console.log(p);
+}
+
+for(prod of carrito) {
+    console.log(prod.prod);
+}
+
+//Otra forma de declarar un Ciclo For para Objetos
+for(info of Object.values(automovil)) {
+    console.log(info);
+}
 
 
 
