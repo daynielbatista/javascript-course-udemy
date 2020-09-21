@@ -309,10 +309,71 @@ let valor1;
 valor1=unDia.getDay();
 console.log(valor1);
 
-//Condicionales - if, ifelse, else
-
-
+//Condicionales - if, ifelse, else *-> Esto te lo sabes
 //Operador && y || y el Ternario
+
+let hora = 20;
+
+if (hora > 0 && hora <= 12) {
+    console.log('Buenos dias');
+} else if (hora > 12 && hora <= 18) {
+    console.log('Buenas tardes');
+} else if (hora  > 18 && hora <= 24) {
+    console.log('Buenas noches');
+} else {
+    console.log('Horario no valido');
+}
+
+//Ternario
+let logueado = true;
+console.log( logueado ? 'Si se logueo' : 'No se logueo');
+
+//Switch - Es como muchas condiciones if
+const metodoPago = 'efectivo';
+
+switch (metodoPago) {
+    case 'efectivo':
+        hola();
+        console.log(`Pagaste con ${metodoPago}`);
+        break;
+    case 'cheque':
+        console.log(`Pagaste con ${metodoPago} revisaremos que tenga fondos`);
+        break;
+    case 'tarjeta':
+        console.log(`Pagaste con ${metodoPago} espere un momento`);
+        break;
+    default:
+        console.log('Aun no has pagado o metodo no valido');
+        break;
+}
+
+function hola() {
+    console.log('Hola amigo,');
+}
+
+//Loops o iteradores - Funcion que corre hasta que una condicion se cumple
+
+//For Loop
+for (let i = 0; i < 10; i++) {
+    console.log(`Numero: ${i}`);    
+}
+
+//While Loop
+let h = 10;
+while (h<=10) {
+    console.log(h);
+    h++;
+}
+//Do While Loop - No se usa mucho en JS
+let k=11;
+do {
+    console.log (k);
+    k++;
+} while (k<10);
+
+const pend = ['tarea', 'comer', 'JS'];
+
+
 
 
 
