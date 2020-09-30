@@ -471,3 +471,12 @@ let {datos:{cuenta:{saldo}}} = cliente;
 console.log(nombrex, tipo, ciudad, saldo); // Print: {nombrex: "Ale", tipo: "Premium", }
 //Nota: esto facilita mucho la extraccion de datos de los objetos.
 
+//*** Object Literal Enhacement */ Hace lo contrario de Destructuring. Arma o junta los elementos del objeto.
+
+const banda = 'Al2',
+      genero = 'ra',
+      canciones = ['Ego', 'Chie', 'Aldo'];
+
+const al2 = {banda, genero, canciones}
+
+console.log(al2);
