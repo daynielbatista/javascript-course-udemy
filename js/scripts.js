@@ -433,4 +433,41 @@ let nuevoArreglo2 = pend.map(tarea =>{
 console.log(nuevoArreglo);
 console.log(nuevoArreglo2);
 
-//Volver a ver los forEach y los Maps.
+//***Volver a ver los forEach y los Maps:
+//Esto aun no me queda del todo clearTimeout.
+
+ //**Scope -> ok
+
+
+
+//****Object Destructuring - Para llamar o sacar las variables del objeto
+const cliente = {
+    nombrex:'Ale',
+    tipo: 'Premium',
+    datos: {
+        ubicacion:{
+            ciudad:'Havana',
+        pais:'Cuba'
+        }, 
+        cuenta: {
+            desde:'10/12/2019',
+            saldo:'10000'
+        }      
+    }    
+}
+console.log (cliente);
+
+//Crear las variables
+/*const nombreCliente1 = cliente.nombrex,
+      tipoCliente1 = cliente.tipo,
+      ubicacionCliente = cliente.datos.ubicacion;
+
+console.log(nombreCliente1, ubicacionCliente);*/
+
+// **Con Object Destructuring:
+let{nombrex, tipo} = cliente;
+let {datos:{ubicacion : {ciudad}}} = cliente;
+let {datos:{cuenta:{saldo}}} = cliente;
+console.log(nombrex, tipo, ciudad, saldo); // Print: {nombrex: "Ale", tipo: "Premium", }
+//Nota: esto facilita mucho la extraccion de datos de los objetos.
+
