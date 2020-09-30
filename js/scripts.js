@@ -480,3 +480,28 @@ const banda = 'Al2',
 const al2 = {banda, genero, canciones}
 
 console.log(al2);
+
+//***Filter, find and reduce -> Funciones de JavaScript
+
+const personas = [
+    {nombre: 'Juan', edad: 20},
+    {nombre: 'Pablo', edad: 50},
+    {nombre: 'Ale', edad: 23, aprendiendo: 'JS'},
+    {nombre: 'Day', edad: 28},
+    {nombre: 'Buty', edad: 33},
+];
+//Obtener las personas mayores de 25
+const mayores = personas.filter(persona => persona.edad > 25);
+    //{return persona.edad > 25 }    -- esta parte no es necesaria con el arrow function, lo podemos eliminar.
+console.log(mayores);
+
+//Extraer informacion de Ale
+const ale1 = personas.find(persona => persona.nombre ==='Ale');
+let {aprendiendo} = ale1;
+console.log(aprendiendo);
+
+//Reduce
+let totaled = personas.reduce((edadTotal, persona)=>{
+    return edadTotal + persona.edad;
+}, 0); // El 0 aqui es para decir en que valor va a empezar.
+console.log(totaled/personas.length); //para calcular el promedio de edad.
