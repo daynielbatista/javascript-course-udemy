@@ -142,7 +142,7 @@ let html2 = `<ul>
             </ul>`;            
 
 //contenedorApp.innerHTML = html;
-contenedorApp.innerHTML = html2;
+//contenedorApp.innerHTML = html2;
 
 
 /*Funciones*/
@@ -516,5 +516,21 @@ function descargarUsuarios(cantidad) {
     //llamando a Fetch
     fetch(api)
         .then(respuesta => respuesta.json())
-        .then(datos => console.log(datos.results) );
+        .then(datos => imprimirHTML(datos.results) );
 } 
+
+function imprimirHTML(datos) {
+    datos.forEach(usuario => {
+        console.log(usuario);
+        const li = document.createElement('li');
+        
+        const {name: {first}, name: {last}, picture: {medium}, nat } = usuario;
+        li.innerHTML = `
+            Nombre: ${first} ${last}
+            Pais: ${nat}
+            imagen: <img src="${medium}">
+        `;
+
+        document.querySelector('#app').appendChild(li);
+    })
+}
