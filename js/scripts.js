@@ -505,3 +505,16 @@ let totaled = personas.reduce((edadTotal, persona)=>{
     return edadTotal + persona.edad;
 }, 0); // El 0 aqui es para decir en que valor va a empezar.
 console.log(totaled/personas.length); //para calcular el promedio de edad.
+
+//Fetch API- Llego para reemplazar Ajax
+
+descargarUsuarios(30);
+
+function descargarUsuarios(cantidad) {
+    const api = `https://api.randomuser.me/?nat=US&results=${cantidad}`;
+
+    //llamando a Fetch
+    fetch(api)
+        .then(respuesta => respuesta.json())
+        .then(datos => console.log(datos.results) );
+} 
